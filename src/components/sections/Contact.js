@@ -15,8 +15,7 @@ const Contact = ({ data, color }) => {
         </div>
       )}
       <div className='contact'>
-        {/* <p className='heading'>Personal Info</p> */}
-        {/* <hr /> */}
+        
         {location && (
           <div className='item'>
             <p className='material-icons icon' style={{ color: `${color.primary}` }}>
