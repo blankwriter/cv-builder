@@ -1,13 +1,14 @@
 import React from 'react';
+import * as MdIcons from "react-icons/md";
 
 const Skills = ({ data, color }) => {
   const skills = data.skills;
   return (
     <div className='skills'>
       <p className='heading' style={{ color: `${color.primary}` }}>
-        {/* <span className='fas fa-puzzle-piece' /> */}
+        
         <span className='material-icons' style={{ color: `${color.primary}` }}>
-          extension
+           <MdIcons.MdExtension/>
         </span>
         Skills
       </p>

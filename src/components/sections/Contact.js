@@ -1,5 +1,8 @@
 import React from 'react';
 import Default from '../../images/default.jpg';
+import * as IoIcons from "react-icons/io";
+import * as AiIcons from 'react-icons/ai';
+import * as MdIcons from 'react-icons/md';
 
 const Contact = ({ data, color }) => {
   const { name, photoUrl, location, phone, email, linkedin, github } = data.contact;
@@ -19,7 +22,7 @@ const Contact = ({ data, color }) => {
         {location && (
           <div className='item'>
             <p className='material-icons icon' style={{ color: `${color.primary}` }}>
-              location_on
+             <IoIcons.IoLocation/>
             </p>
             <p className='text'>{location}</p>
           </div>
@@ -27,7 +30,7 @@ const Contact = ({ data, color }) => {
         {phone && (
           <div className='item'>
             <p className='material-icons icon' style={{ color: `${color.primary}` }}>
-              phone
+              <AiIcons.AiFillPhone/>
             </p>
             <p className='text'>
               <a href={'tel:' + phone}>{phone}</a>
@@ -37,26 +40,19 @@ const Contact = ({ data, color }) => {
         {email && (
           <div className='item'>
             <p className='material-icons icon' style={{ color: `${color.primary}` }}>
-              email
+              <MdIcons.MdEmail/>
+
             </p>
             <p className='text'>
               <a href={'mailto:' + email}>{email}</a>
             </p>
           </div>
         )}
-        {linkedin && (
-          <div className='item'>
-            <i className='fab fa-linkedin icon' style={{ color: `${color.primary}` }}></i>
-            <p className='text'>
-              <a href={'https://www.' + linkedin} target='_blank' rel='noopener noreferrer'>
-                {linkedin}
-              </a>
-            </p>
-          </div>
-        )}
+
         {github && (
           <div className='item'>
             <i className='fab fa-github icon' style={{ color: `${color.primary}` }}></i>
+            <AiIcons.AiFillGithub/>
             <p className='text'>
               <a href={'https://www.' + github} target='_blank' rel='noopener noreferrer'>
                 {github}

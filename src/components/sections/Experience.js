@@ -1,4 +1,5 @@
 import React from 'react';
+import * as MdIcons from "react-icons/md";
 
 const Experience = ({ data, color }) => {
   const experience = data.experience;
@@ -6,7 +7,7 @@ const Experience = ({ data, color }) => {
     <div className='experience'>
       <p className='heading' style={{ color: `${color.primary}` }}>
         <span className='material-icons' style={{ color: `${color.primary}` }}>
-          business_center
+        <MdIcons.MdBusinessCenter/>
         </span>
         Experience
       </p>
