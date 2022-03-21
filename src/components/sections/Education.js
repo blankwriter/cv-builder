@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FaIcons from "react-icons/fa";
 
 const Education = ({ data, color }) => {
   const education = data.education;
@@ -6,7 +7,7 @@ const Education = ({ data, color }) => {
     <div className='education'>
       <p className='heading' style={{ color: `${color.primary}` }}>
         <span className='material-icons' style={{ color: `${color.primary}` }}>
-          s
+          <FaIcons.FaSchool/>
         </span>
         Education
       </p>
@@ -20,11 +21,7 @@ const Education = ({ data, color }) => {
                 {item.year}
               </p>
             )}
-            {/* <p className='score'>
-              {item.percentage 
-                ? `Percentage: ${item.percentage}`
-                : item.cgpa && `CGPA: ${item.cgpa}`}
-            </p> */}
+           
             {item.percentage.length > 0 && (
               <p className='score' style={{ color: `${color.primary}` }}>
                 {item.percentage <= 10
