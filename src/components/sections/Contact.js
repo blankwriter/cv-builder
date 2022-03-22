@@ -5,7 +5,7 @@ import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 
 const Contact = ({ data, color }) => {
-  const { name, photoUrl, location, phone, email, linkedin, github } = data.contact;
+  const { name, photoUrl, location, phone, email, github } = data.contact;
 
   return (
     <>
