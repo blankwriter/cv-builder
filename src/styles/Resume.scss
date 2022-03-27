@@ -1,0 +1,519 @@
+
+@import './color-seagreen.scss';
+
+@media only screen and (min-width: 375px) and (max-width:480px) {
+ .resume{
+  width: 20%;
+  .left-content {
+    width: 200px;
+  }
+ }
+}
+
+.resume {
+  margin: 0;
+  padding: 0;
+  height: 150vh;
+  display: flex;
+  
+
+  .left-content {
+    padding: 15px 20px 15px 10px;
+    width: calc(100% - 300px);
+    min-width: 600px;
+    background-color: $right-background-color;
+
+    .heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      color: $left-primary-color;
+      span {
+        font-size: 18px;
+        width: fit-content;
+        margin-right: 6px;
+        transform: translateY(2.5px);
+        color: $left-primary-color;
+      }
+    }
+
+    hr {
+      margin: 2px 0 5px 0;
+      width: 100%;
+      border: 0.5px solid $left-hr-color;
+    }
+
+    a {
+      color: $left-link-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    .certifications {
+      padding: 10px 10px 0 10px;
+      font-size: 14px;
+
+      .row-table {
+        width: calc(100% - 10px);
+        display: flex;
+        padding: 5px 5px;
+        border-bottom: 1px dashed $right-separator-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+       
+
+        .left-column {
+          width: 250px;
+          padding: 0;
+
+          .year {
+            margin: 2px 0 0 5px;
+            width: inherit;
+            font-size: 13.5px;
+            color: $right-year-color;
+            span {
+              font-size: 12px;
+              margin-right: 5px;
+              color: $right-calendar-icon-color;
+            }
+          }
+          .score {
+            width: fit-content;
+            margin: 6px 0 5px 21px;
+            font-size: 14px;
+            font-weight: bold;
+            color: $right-score-color;
+            span {
+              margin-left: 2px;
+            }
+          }
+ 
+        }
+
+        .right-column {
+          width: 100%;
+          padding: 0;
+
+          .course {
+            margin: 0;
+            font-size: 14px;
+            color: $right-text-color;
+          }
+          .institution {
+            margin: 4px 0 0 0;
+            font-size: 13.5px;
+            font-weight: bold;
+            color: $right-text-color;
+          }
+          .description {
+            font-size: 13.5px;
+            margin: 4px 0 0 0;
+            color: $right-text-secondary-color;
+          }
+        }
+      }
+    }
+    .certifications {
+      padding: 10px 10px 0 10px;
+      font-size: 14px;
+
+      .row-table {
+        width: calc(100% - 10px);
+        display: flex;
+        padding: 5px 5px;
+        border-bottom: 1px dashed $right-separator-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+
+        .left-column {
+          width: 250px;
+          padding: 0;
+
+          .year {
+            margin: 2px 0 0 5px;
+            width: inherit;
+            font-size: 13.5px;
+            color: $right-year-color;
+            span {
+              font-size: 12px;
+              margin-right: 5px;
+              color: $right-calendar-icon-color;
+            }
+          }
+
+        }
+
+        .right-column {
+          width: 100%;
+          padding: 0;
+
+          .course {
+            margin: 0;
+            font-size: 14px;
+            color: $right-text-color;
+          }
+          .institution {
+            margin: 4px 0 0 0;
+            font-size: 13.5px;
+            font-weight: bold;
+            color: $right-text-color;
+          }
+          .description {
+            font-size: 13.5px;
+            margin: 4px 0 0 0;
+            color: $right-text-secondary-color;
+          }
+        }
+      }
+    }
+
+    .experience {
+      padding: 10px 10px 0 10px;
+      font-size: 14px;
+
+      .row-table {
+        width: calc(100% - 10px);
+        display: flex;
+        padding: 5px 5px;
+        border-bottom: 1px dashed $right-separator-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+       
+
+        .left-column {
+          width: 250px;
+          padding: 0;
+
+          .year {
+            width: inherit;
+            font-size: 13px;
+            color: $right-year-color;
+            margin: 2px 0 0 5px;
+            span {
+              font-size: 12px;
+              margin-right: 5px;
+              color: $right-calendar-icon-color;
+            }
+          }
+        }
+
+        .right-column {
+          width: 100%;
+          padding: 0;
+
+          .position {
+            margin: 0;
+            font-size: 14px;
+            color: $right-text-color;
+          }
+          .company {
+            margin: 4px 0 0 0;
+            font-size: 13.5px;
+            font-weight: bold;
+            color: $right-text-color;
+          }
+          .description {
+            font-size: 13.5px;
+            margin: 4px 0 0 0;
+            color: $right-text-secondary-color;
+          }
+        }
+      }
+    }
+
+    .education {
+      padding: 10px 10px 0 10px;
+      font-size: 14px;
+
+      .row-table {
+        width: calc(100% - 10px);
+        display: flex;
+        padding: 5px 5px 5px;
+        border-bottom: 1px dashed $right-separator-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+       
+
+        .left-column {
+          width: 250px;
+          padding: 0;
+
+          .year {
+            width: inherit;
+            font-size: 13px;
+            color: $right-year-color;
+            margin: 0 0 0 5px;
+            span {
+              font-size: 12px;
+              margin-right: 5px;
+              color: $right-calendar-icon-color;
+            }
+          }
+         
+        }
+
+        .right-column {
+          width: 100%;
+          padding: 0;
+
+          .course {
+            font-size: 14px;
+            margin: 0;
+            color: $right-text-color;
+          }
+          .institution {
+            margin: 4px 0 0;
+            font-size: 13.5px;
+            color: $right-text-color;
+            font-weight: bold;
+          }
+          
+        }
+      }
+    }
+ 
+    .text {
+      font-size: 14px;
+      color: $left-text-color;
+    }
+    .icon {
+      font-size: 17px;
+      color: $left-text-secondary-color;
+    }
+ 
+   .profile {
+
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+
+    .photo-container {
+      width: 125px;
+      height: 125px;
+      overflow: hidden;
+      
+      margin: 15px 35px 0 25px;
+      box-shadow: 0 0 10px 0 $left-photo-shadow-color;
+      border-radius: 100%;
+      background-color: #fff;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+    .contact-container {
+      
+      margin-left: 20px;
+      text-align: start;
+
+    .name {
+      padding: 6px 7px 10px 2px;
+      height: fit-content;
+      font-size: 28px;
+      font-weight: 300;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: left;
+      
+    }
+    
+    .title {
+      font-size: 18px;
+      margin-left: 3px;
+      padding-bottom: 5px;
+      margin-bottom: 13px;
+    }
+
+
+    .contact {
+      padding: 0 5px 0 5px;
+      height: fit-content;
+      text-align: right;
+
+      .itemN {
+        display: flex;
+        justify-content: flex-start; 
+        text-align: start;
+            
+        .icon {
+          width: 25px;
+          margin-top: 14px;
+          color: $left-primary-color;
+        }
+
+      }
+
+      .itemG {
+
+        display: flex;
+        justify-content: flex-start; 
+        text-align: start;
+            
+        .icon {
+          width: 25px;
+          margin-top: 14px;
+          color: $left-primary-color;
+        }
+
+      }
+      
+
+      .item {
+        display: flex;
+        justify-content: flex-start; 
+        text-align: start;
+            
+        .icon {
+          width: 25px;
+          margin: 4px 0;
+          color: $left-primary-color;
+        }
+
+        
+         .text {
+          margin: 5px 0;
+          word-break: break-all;
+          }
+        }
+      }
+     }
+    }
+  
+
+  }
+
+  .right-content {
+    width: 300px;
+    background-color: $left-background-color;
+    color: $right-primary-color;
+    padding: 10px 10px;
+   
+    .perskills {
+      padding: 20px 10px 0 10px;
+      height: fit-content;
+
+      .perskills-container {
+        width: 100%;
+        height: fit-content;
+
+        .item {
+          width: 95%;
+          padding: 5px 0;
+          display: flex;
+          border-bottom: 1px dashed $left-separator-color;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .perskill {
+            width: 150px;
+            font-size: 15px;
+            color: #fff;
+          }
+          .level {
+            width: fit-content;
+            display: flex;
+            height: 100%;
+            margin: auto;
+
+            .star {
+              font-size: 18px;
+              margin: 0 1px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .skills {
+      padding: 25px 5px 0 10px;
+      height: fit-content;
+
+      .skills-container {
+        width: 100%;
+        display: inline-block;
+
+        .item {
+          float: left;
+          width: fit-content;
+          padding: 2px 5px;
+          margin: 5px 8px 5px 0;
+          border-radius: 5px;
+          color: $left-skills-color;
+          background-color: $left-skills-background-color;
+          box-shadow: 0 0 0 1px $left-skills-shadow-color;
+        }
+      }
+    }
+
+    a {
+      color: $right-link-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    hr {
+      margin: 1.5px 0 5px 0;
+      width: 100%;
+      border: 0.5px solid $right-hr-color;
+    }
+
+    .heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      color: $right-primary-color;
+      span {
+        font-size: 18px;
+        width: fit-content;
+        margin-right: 6px;
+        transform: translateY(2.5px);
+        color: $right-primary-color;
+      }
+    }
+
+    .objective {
+      padding: 10px 10px 5px 10px;
+      .comma {
+        font-size: 50px;
+        text-decoration: wavy;
+        margin-left: 0;
+        font-weight: 600;
+        
+      }
+
+      .item {
+        font-size: 18px;
+        text-decoration: solid;
+        text-align: start;
+        color: #fff;
+      }
+    }
+
+
+
+
+
+
+  }
+}

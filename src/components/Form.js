@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Files from 'react-files';
 
+
 import '../styles/Form.scss';
 
-const Form = ({ data, setData, preset, setColor }) => {
-  let { name, photoUrl, location, phone, email, github } = data.contact;
+const Form = ({ data, setData}) => {
+  let { name, role, photoUrl, location, phone, email, github } = data.contact;
   
   
   let objective = data.objective;
   let education = data.education;
   let experience = data.experience;
   let certifications = data.certifications;
+  let perskills = data.perskills;
  
   // Handle photo upload
   const handlePhotoUpload = (files) => {
@@ -77,6 +79,16 @@ const Form = ({ data, setData, preset, setColor }) => {
     let temp = section;
     temp[index][type] = e.target.value;
 
+    if (section === perskills && type === 'level') {
+      if (e.target.value > 5) {
+        temp[index][type] = 5;
+      } else if (e.target.value < 1) {
+        temp[index][type] = 1;
+      } else {
+        temp[index][type] = e.target.value;
+      }
+    }
+
     setData({
       ...data,
       section: temp,
@@ -110,6 +122,8 @@ const Form = ({ data, setData, preset, setColor }) => {
           <h3 className='heading'>Contact</h3>
           <p className='label'>Name</p>
           <input type='text' name='name' value={name} onChange={handleContactChange} />
+          <p className='label'>Role</p>
+          <input type='text' name='role' value={role} onChange={handleContactChange} />
           <p className='label'>Photo URL</p>
           <input type='text' name='photoUrl' value={photoUrl} onChange={handleContactChange} />
           <p className='label'>Location</p>
@@ -137,6 +151,43 @@ const Form = ({ data, setData, preset, setColor }) => {
             value={skills}
             onChange={(e) => setSkills(e.target.value)}
           ></textarea>
+        </div>
+
+        <div className='section perskills'>
+          <hr />
+          <h3 className='heading'>Personal Skills</h3>
+          {perskills.map((item, index) => {
+            return (
+              <div className='row' key={index}>
+                <input
+                  type='text'
+                  name='perskill'
+                  placeholder='Skills'
+                  value={item.perskill}
+                  onChange={(e) => handleChange(e, index, perskills, 'perskill')}
+                />
+                <input
+                  type='number'
+                  name='level'
+                  placeholder='Level'
+                  value={item.level}
+                  onChange={(e) => handleChange(e, index, perskills, 'level')}
+                />
+                <button
+                  className='btn btn-sm btn-danger'
+                  onClick={() => removeRow(perskills, index)}
+                >
+                  Remove
+                </button>
+              </div>
+            );
+          })}
+          <button
+            className='btn btn-sm btn-dark'
+            onClick={() => addRow(perskills, { perskill: '', level: '' })}
+          >
+            Add
+          </button>
         </div>
 
         <div className='section objective'>
@@ -206,6 +257,8 @@ const Form = ({ data, setData, preset, setColor }) => {
             Add
           </button>
         </div>
+
+      
 
         <div className='section experience'>
           <hr />

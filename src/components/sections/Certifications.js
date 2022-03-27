@@ -1,34 +1,39 @@
 import React from 'react';
-import * as FaIcons from "react-icons/fa";
+import * as FaIcons from 'react-icons/fa';
 
-const Education = ({ data }) => {
-  const education = data.education;
+
+const Certifications = ({ data }) => {
+  const certifications = data.certifications;
   return (
-    <div className='education'>
+    <div className='certifications'>
       <p className='heading' >
         <span className='material-icons' >
-          <FaIcons.FaSchool/>
+          <FaIcons.FaCertificate/>
         </span>
-        Education
+        Certifications
       </p>
       <hr />
-      {education.map((item, index) => (
+      {certifications.map((item, index) => (
         <div key={index} className='row-table'>
           <div className='left-column'>
             {item.year && (
               <p className='year'>
                 <span className='calendar-alt' />
-                <FaIcons.FaCalendarAlt/> <span/>
+                <FaIcons.FaCalendarAlt/> 
+                <span/>
                 {item.year}
               </p>
             )}
-           
-           
+            {item.score && (
+              <p className='score'>
+                Score: {item.score}
+              </p>
+            )}
           </div>
           <div className='right-column'>
             <p className='course'>{item.course}</p>
             <p className='institution'>{item.institution}</p>
-            
+            <p className='description'>{item.description}</p>
           </div>
         </div>
       ))}
@@ -36,4 +41,4 @@ const Education = ({ data }) => {
   );
 };
 
-export default Education;
+export default Certifications;
