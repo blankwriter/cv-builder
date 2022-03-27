@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import * as MyIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import '../styles/Navbar.css';
+import '../styles/Navbar.scss';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
