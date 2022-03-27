@@ -1,6 +1,8 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss'
+import { Link } from 'react-router-dom';
 import Work from './Work.svg'
+
 
 const Home = () => {
 
@@ -14,7 +16,9 @@ const Home = () => {
        <div className='main-description'>
       <h1>Build a job-winning resume for free</h1>
       <p>The ultimate resume site </p>
+      <Link to='/resumepage'>
       <button onClick={handleClick}> Create Resume</button>
+      </Link>
       </div>
     
       <div className='img-container'>

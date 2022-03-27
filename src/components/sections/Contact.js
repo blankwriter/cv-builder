@@ -4,34 +4,42 @@ import * as IoIcons from "react-icons/io";
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 
-const Contact = ({ data, color }) => {
-  const { name, photoUrl, location, phone, email, github } = data.contact;
+const Contact = ({ data }) => {
+  const { name, role, photoUrl, location, phone, email, github } = data.contact;
 
   return (
     <>
+    <div className='profile' >
       <div className='photo-container'>
         <img src={photoUrl.trim().length !== 0 ? photoUrl : Default} alt='' />
       </div>
+      <div className='contact-container'>
       {name && (
-        <div className='name' style={{ color: `${color.primary}` }}>
+        <div className='name'>
           {name}
         </div>
+      )}
+
+      {role && (
+        <div className='title'>
+          {role} 
+          </div>
       )}
       <div className='contact'>
         
         {location && (
           <div className='item'>
-            <p className='material-icons icon' style={{ color: `${color.primary}` }}>
-             <IoIcons.IoLocation/>
-            </p>
+            <i className='icon'  >
+             <IoIcons.IoIosHome/>
+            </i>
             <p className='text'>{location}</p>
           </div>
         )}
         {phone && (
-          <div className='item'>
-            <p className='material-icons icon' style={{ color: `${color.primary}` }}>
+          <div className='itemN'>
+            <i className='icon' >
               <AiIcons.AiFillPhone/>
-            </p>
+            </i>
             <p className='text'>
               <a href={'tel:' + phone}>{phone}</a>
             </p>
@@ -39,10 +47,10 @@ const Contact = ({ data, color }) => {
         )}
         {email && (
           <div className='item'>
-            <p className='material-icons icon' style={{ color: `${color.primary}` }}>
+            <i className='icon' >
               <MdIcons.MdEmail/>
 
-            </p>
+            </i>
             <p className='text'>
               <a href={'mailto:' + email}>{email}</a>
             </p>
@@ -50,9 +58,9 @@ const Contact = ({ data, color }) => {
         )}
 
         {github && (
-          <div className='item'>
-            <i className='fab fa-github icon' style={{ color: `${color.primary}` }}></i>
-            <AiIcons.AiFillGithub/>
+          <div className='itemG'>
+            <i className='icon' >  <AiIcons.AiFillGithub/> </i>
+            
             <p className='text'>
               <a href={'https://www.' + github} target='_blank' rel='noopener noreferrer'>
                 {github}
@@ -60,6 +68,8 @@ const Contact = ({ data, color }) => {
             </p>
           </div>
         )}
+      </div>
+      </div>
       </div>
     </>
   );

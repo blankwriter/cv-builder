@@ -1,5 +1,15 @@
 @import './reusable.scss';
 
+@media only screen and (min-width: 375px) and (max-width:480px) {
+.form-container {
+  width: 50%;
+
+  .file-btn {
+    width: 12px;
+  }
+}
+}
+
 .form-container {
   width: 100%;
   min-width: 278px;
@@ -52,7 +62,31 @@
         margin-right: 35px;
       }
     }
+    .perskills {
+      width: 350px;
+      .row {
+        padding-right: 2px;
+        margin: 2px;
+        display: flex;
 
+        input {
+          margin: 5px 5px 5px 0;
+          &:first-child {
+            width: 125px;
+          }
+          &:last-child {
+            max-width: 50px;
+            margin: inherit 10px;
+          }
+        }
+        button {
+          margin: 7px 0;
+        }
+      }
+      button {
+        margin: 10px 0 0 2px;
+      }
+    }
     
     .education,
     .experience,

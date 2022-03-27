@@ -8,17 +8,18 @@
   align-items: center;
 
   .main-description{
+    width: calc(100% - 700px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 2rem;
-    margin-left: 14rem;
+    margin-left: 12rem;
     margin-top: 2rem;
     flex: 0.5; 
   
     h1{
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 3.25rem;
       width: 100%;
       color: black;
@@ -28,7 +29,7 @@
     p{
       font-size: 1.5rem;
       color: black;
-      width: 90%;
+      width: 100%;
       
     }
 
@@ -36,16 +37,16 @@
       margin-top: 2rem;
       font-size: 1.5rem;
       background-size: 300% 100%;
-      background-image: linear-gradient(to right, #1b8cce, #00B4D7, #1a83ff);
+      background-image: linear-gradient(to right, #1a83ff, #00B4D7, #0c3e77);
       border-radius: 5px;
       padding: 0.75rem 2rem;
-      font-family: Nunito;
       font-style: normal;
       text-transform: inherit;
       font-weight: bold;
       text-align: center;
       color: black;
       transition: 0.5s ease; 
+      cursor: pointer;
 
       :hover{
         background-position: 80% 0;
@@ -59,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     
     img {
       width: 700px;
@@ -67,6 +69,95 @@
   }
 }
 
+@media only screen and (min-width: 375px) and (max-width: 480px)  {
+ body{
+   font-size: 12px;
+} 
+.main {
+ display: flex;
+ flex-direction: column;
+ height: 100vh;
+  .main-description {
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    button {
+      margin-left: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 100px;
+      font-size: 2rem;
+      margin-left: 20px;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+.img-container {
+  width: 20%;
+  margin-left: 25px;
+  img {
+    width: 500px;
+   
+  }
+  }
+}
+}
+
+@media only screen  and (min-width: 768px) and (max-width: 912px) {
+ .main {
+  display: flex;
+  flex-direction: column;
+  
+   .main-description {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      margin: 225px 20px 15px 20px;
+      
+      
+      h1{
+        font-size: 4rem;
+        width: 700px;
+        text-align: center;
+      }
+
+      p{
+        font-size: 2rem;
+        width: 500px;
+        text-align: center;
+        margin-bottom: 3px;
+        margin-top: 2px;
+      }
+
+      button {
+        margin-bottom: 1px;
+      }
+    
+   }
+
+   .img-container {
+   
+    width: 30%;
+    margin-bottom: 200px;
+    
+     img {
+       width: 950px;
+       margin-top: 3px;
+      
+
+     }
+   }
+ } 
+  
+}
 
 

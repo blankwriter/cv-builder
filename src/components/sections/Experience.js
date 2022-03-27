@@ -1,23 +1,25 @@
 import React from 'react';
 import * as MdIcons from "react-icons/md";
+import * as FaIcons from "react-icons/fa";
 
-const Experience = ({ data, color }) => {
+const Experience = ({ data }) => {
   const experience = data.experience;
   return (
     <div className='experience'>
-      <p className='heading' style={{ color: `${color.primary}` }}>
-        <span className='material-icons' style={{ color: `${color.primary}` }}>
+      <p className='heading'>
+        <span className='material-icons'>
         <MdIcons.MdBusinessCenter/>
         </span>
         Experience
       </p>
-      <hr style={{ borderColor: `${color.primary}` }} />
+      <hr/>
       {experience.map((item, index) => (
         <div key={index} className='row-table'>
           <div className='left-column'>
             {item.year && (
               <p className='year'>
-                <span className='fas fa-calendar-alt' />
+                <span className='calendar-alt' />
+                <FaIcons.FaCalendarAlt/> <span/>
                 {item.year}
               </p>
             )}
