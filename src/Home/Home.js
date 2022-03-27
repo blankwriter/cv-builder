@@ -15,7 +15,7 @@ const Home = () => {
     <div className='main'> 
        <div className='main-description'>
       <h1>Build a job-winning resume for free</h1>
-      <p>The ultimate resume site </p>
+      <p>The ultimate resume site, design your resume with a wonder pre-customize template,smooth form, perfect resume. </p>
       <Link to='/resumepage'>
       <button onClick={handleClick}> Create Resume</button>
       </Link>
