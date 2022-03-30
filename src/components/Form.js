@@ -242,20 +242,7 @@ const Form = ({ data, setData}) => {
               </div>
             );
           })}
-          <button
-            className='btn btn-sm btn-dark'
-            onClick={() =>
-              addRow(education, {
-                year: '',
-                course: '',
-                institution: '',
-                university: '',
-                percentage: '',
-              })
-            }
-          >
-            Add
-          </button>
+
         </div>
 
       
@@ -307,14 +294,7 @@ const Form = ({ data, setData}) => {
               </div>
             );
           })}
-          <button
-            className='btn btn-sm btn-dark'
-            onClick={() =>
-              addRow(experience, { year: '', company: '', position: '', description: '' })
-            }
-          >
-            Add
-          </button>
+
         </div>
 
         <div className='section certifications'>
